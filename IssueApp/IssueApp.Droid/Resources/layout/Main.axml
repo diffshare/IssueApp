@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+  <!--
+  <ListView
+      android:id="@+id/listView1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+      -->
+  <fragment
+      android:id="@+id/map"
+      android:layout_width="match_parent"
+      android:layout_height="fill_parent"
+      android:name="com.google.android.gms.maps.MapFragment"/>
+  <SlidingDrawer
+      android:id="@+id/sliding_drawer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:handle="@+id/handle"
+      android:content="@+id/content"
+      android:topOffset="30dp"    
+      android:elevation="20dp"
+        >
+    <TextView
+        android:id="@id/handle"
+        android:textColor="#FF000000"
+        android:background="#FFFFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:text="リストを表示"/>
+    <LinearLayout
+        android:id="@id/content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:background="#77000000" />
+      <ListView
+          android:id="@+id/listView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#FFffffff" />
+    </LinearLayout>
+  </SlidingDrawer>
+</RelativeLayout>
