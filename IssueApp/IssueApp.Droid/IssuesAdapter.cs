@@ -40,6 +40,9 @@ namespace IssueApp.Droid
             var date = convertView.FindViewById<TextView>(Resource.Id.date);
             date.SetText(issue.start_date, TextView.BufferType.Normal);
 
+            var distance = convertView.FindViewById<TextView>(Resource.Id.distance);
+            distance.SetText(issue.distance + "m", TextView.BufferType.Normal);
+
             return convertView;
         }
     }

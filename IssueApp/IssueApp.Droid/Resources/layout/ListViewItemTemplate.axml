@@ -25,6 +25,11 @@
         android:text="@string/hello" />
   </RelativeLayout>
   <TextView
+      android:id="@+id/distance"
+      android:textColor="#FF555555"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+  <TextView
       android:id="@+id/description"
       android:textColor="#FFAAAAAA"
       android:layout_width="match_parent"
